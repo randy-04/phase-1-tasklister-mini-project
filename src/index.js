@@ -16,9 +16,14 @@ function makeTask(task){
   li.textContent = task
   li.appendChild(btn)
   document.querySelector('#tasks').appendChild(li)
+  let color = document.getElementById("colors")
+  let col = color.options[color.selectedIndex].value
+  console.log(col)
+  li.style.color = col
 
 }
 
 function handleDelete(e){
   e.target.parentNode.remove()
 }
+
